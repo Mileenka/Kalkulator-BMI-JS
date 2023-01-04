@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Englebert&family=Mouse+Memoirs&family=Sansita:wght@400;700&display=swap"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Kalkulator BMI</title>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="logo">
+          <a href="index.html">Kalkulator BMI</a>
+        </div>
+      </div>
+    </header>
+
+      <section class="whatIsBmi">
+        <button class="btn-whatIsBmi">Czym jest BMI?</button>
+
+      </section>
+
+    <section class="site-section">
+      <div class="img-weight1"></div>
+      <div class="img-weight2"></div>
+      <h1>Oblicz swój wskaźnik BMI</h1>
+
+      <form id="form">
+        <label class="wzrost" for="height">Wzrost (cm)</label>
+        <input id="height" type="number" name="height"/>
+        <br/>
+
+        <label class="waga" for="weight">Waga (kg)</label>
+        <input id="weight" type="number" name="weight"/>
+        <br/>
+
+        <div class="form-message"></div>
+
+        <div class="buttons">
+          <button class="btn-result" type="submit">Oblicz</button>
+          <button class="btn-clear" type="submit" onClick="dataClear()">Wyczyść</button>
+        </div>
+      </form>
+
+    </section>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

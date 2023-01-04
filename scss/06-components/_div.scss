@@ -1,0 +1,34 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+
+.img-weight1,
+.img-weight2 {
+    position: absolute;
+    width: 10rem;
+    height: 20rem;
+    top: 25rem;
+    opacity: 0.8;
+    -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+    filter: drop-shadow( -5px -5px 5px rgb(0, 0, 0) );}
+
+.img-weight1 {
+    left: -3rem;
+    background: url('../assets/img/weight1.png') center/cover no-repeat;
+    background-size: 8rem;
+
+    @include medium {
+        background-size: 10rem;
+    }
+}
+
+.img-weight2 {
+    right: -3rem;
+    background: url('../assets/img/weight2.png') center/cover no-repeat;
+    background-size: 6rem;
+
+
+@include medium {
+    background-size: 8rem;
+}
+}

@@ -1,0 +1,41 @@
+@use '../01-settings/' as *;
+
+form {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: $color-green;
+    transition: opacity 1s;
+}
+
+input[type=number] {
+    width: 40%;
+    padding: 4px 6px;
+    margin: 10px 0;
+    background-color: #b1f0bc73;
+    font-family: 'Mouse Memoirs', sans-serif;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    letter-spacing: 0.4rem;
+    color: rgba(0, 0, 0, 0.755);
+    border-radius: 2rem;
+    border: none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wzrost {
+    padding-right: 1rem;
+}
+
+.waga {
+    padding-right: 2.37rem;
+}

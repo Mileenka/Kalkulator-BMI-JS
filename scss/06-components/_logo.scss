@@ -1,0 +1,18 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    font-size: 3rem;
+    color: $color-green;
+    text-shadow: 4px 2px 5px rgb(30, 138, 37);
+    border-top: .2rem solid rgba(120, 247, 175, 0.121);
+    border-left: .2rem solid rgba(120, 247, 175, 0.121);
+
+    @include medium {
+        font-size: 3.5rem;
+    }
+}

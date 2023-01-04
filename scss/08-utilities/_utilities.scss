@@ -1,0 +1,29 @@
+@use '../01-settings/' as *;
+
+
+.display {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+}
+
+#result {
+    transition: opacity 3s;
+}
+
+.result {
+    font-size: 2.8rem;
+    text-align: center;
+    color: $color-green;
+    text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
+    // transition: opacity 3s;
+}
+
+.aboutBmi {
+    margin-top: 2.5rem;
+    font-size: 2.8rem;
+    color: $color-green;
+    text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
+}

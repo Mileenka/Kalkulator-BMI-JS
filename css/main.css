@@ -1,0 +1,283 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210deg, 9%, 13%);
+  font-family: "Englebert", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 1.5rem 0 3.8rem 0rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgba(120, 247, 175, 0.937);
+  text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
+  transition: opacity 1s;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  font-size: 3rem;
+  color: rgba(120, 247, 175, 0.937);
+  text-shadow: 4px 2px 5px rgb(30, 138, 37);
+  border-top: 0.2rem solid rgba(120, 247, 175, 0.121);
+  border-left: 0.2rem solid rgba(120, 247, 175, 0.121);
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 3.5rem;
+  }
+}
+
+.img-weight1,
+.img-weight2 {
+  position: absolute;
+  width: 10rem;
+  height: 20rem;
+  top: 25rem;
+  opacity: 0.8;
+  -webkit-filter: drop-shadow(-5px -5px 5px #000);
+  filter: drop-shadow(-5px -5px 5px rgb(0, 0, 0));
+}
+
+.img-weight1 {
+  left: -3rem;
+  background: url("../assets/img/weight1.png") center/cover no-repeat;
+  background-size: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .img-weight1 {
+    background-size: 10rem;
+  }
+}
+
+.img-weight2 {
+  right: -3rem;
+  background: url("../assets/img/weight2.png") center/cover no-repeat;
+  background-size: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .img-weight2 {
+    background-size: 8rem;
+  }
+}
+
+.btn-whatIsBmi {
+  position: absolute;
+  top: -18rem;
+  left: -6rem;
+  background-color: rgba(102, 102, 62, 0.703);
+  color: rgb(224, 237, 163);
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-result, .btn-clear {
+  width: 15rem;
+  height: 3rem;
+  margin-top: 2.5rem;
+  background-color: rgba(120, 247, 175, 0.937);
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 2rem;
+  color: rgb(4, 4, 4);
+  letter-spacing: 0.2rem;
+  border-radius: 3rem;
+  border-style: none;
+}
+.btn-result:hover, .btn-clear:hover {
+  cursor: url("../assets/img/ekg-1.cur"), auto;
+}
+@media screen and (min-width: 768px) {
+  .btn-result, .btn-clear {
+    width: 20rem;
+    height: 4rem;
+    margin-left: -1rem;
+  }
+}
+
+.btn-clear {
+  width: 9rem;
+  height: 2.5rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .btn-clear {
+    width: 14.5rem;
+    height: 3.3rem;
+  }
+}
+
+form {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: rgba(120, 247, 175, 0.937);
+  transition: opacity 1s;
+}
+
+input[type=number] {
+  width: 40%;
+  padding: 4px 6px;
+  margin: 10px 0;
+  background-color: rgba(177, 240, 188, 0.4509803922);
+  font-family: "Mouse Memoirs", sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  letter-spacing: 0.4rem;
+  color: rgba(0, 0, 0, 0.755);
+  border-radius: 2rem;
+  border: none;
+}
+input[type=number]:focus {
+  outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wzrost {
+  padding-right: 1rem;
+}
+
+.waga {
+  padding-right: 2.37rem;
+}
+
+@keyframes section-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.whatIsBmi {
+  position: relative;
+}
+
+.site-section {
+  position: relative;
+  height: 40rem;
+  width: 30rem;
+  padding: 2rem;
+  background-color: rgba(50, 52, 63, 0.256);
+  border-radius: 1.5rem;
+  box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
+  animation: section-animation 4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media screen and (min-width: 768px) {
+  .site-section {
+    width: 43rem;
+    text-align: center;
+  }
+}
+
+.display {
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+}
+
+#result {
+  transition: opacity 3s;
+}
+
+.result {
+  font-size: 2.8rem;
+  text-align: center;
+  color: rgba(120, 247, 175, 0.937);
+  text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
+}
+
+.aboutBmi {
+  margin-top: 2.5rem;
+  font-size: 2.8rem;
+  color: rgba(120, 247, 175, 0.937);
+  text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,14 @@
+@use '../01-settings/' as *;
+
+// font-family: 'Dongle', sans-serif;
+    // font-family: 'Mouse Memoirs', sans-serif;
+    // font-family: 'Sansita', sans-serif;
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-veryDarkBlue;
+    font-family: 'Englebert', sans-serif;
+}
