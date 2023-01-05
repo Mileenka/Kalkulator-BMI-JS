@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1, h2 {
   margin: 1.5rem 0 3.8rem 0rem;
   text-align: center;
   font-size: 2.5rem;
@@ -78,10 +78,15 @@ h1 {
   text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
   transition: opacity 1s;
 }
+@media screen and (min-width: 768px) {
+  h1, h2 {
+    font-size: 2.7rem;
+  }
+}
 
-.row {
-  display: flex;
-  flex-direction: column;
+article {
+  font-size: 1.6rem;
+  color: rgba(120, 247, 175, 0.937);
 }
 
 .logo {
@@ -135,9 +140,9 @@ h1 {
 }
 
 .btn-whatIsBmi {
-  position: absolute;
-  top: -18rem;
-  left: -6rem;
+  position: relative;
+  top: -16rem;
+  left: -14.6rem;
   background-color: rgba(102, 102, 62, 0.703);
   color: rgb(224, 237, 163);
   border-radius: 0.5rem;
@@ -154,7 +159,7 @@ h1 {
 .btn-result, .btn-clear {
   width: 15rem;
   height: 3rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   background-color: rgba(120, 247, 175, 0.937);
   font-family: "Mouse Memoirs", sans-serif;
   font-size: 2rem;
@@ -162,15 +167,16 @@ h1 {
   letter-spacing: 0.2rem;
   border-radius: 3rem;
   border-style: none;
+  box-shadow: rgba(8, 8, 8, 0.35) 0 0.5rem 1rem;
 }
 .btn-result:hover, .btn-clear:hover {
-  cursor: url("../assets/img/ekg-1.cur"), auto;
+  background-color: rgb(182, 248, 193);
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .btn-result, .btn-clear {
     width: 20rem;
     height: 4rem;
-    margin-left: -1rem;
   }
 }
 
@@ -187,16 +193,50 @@ h1 {
 }
 
 form {
-  margin-top: 2rem;
   font-size: 2rem;
   color: rgba(120, 247, 175, 0.937);
   transition: opacity 1s;
 }
 
+.form-control label {
+  display: inline-block;
+}
+
+.form-control span {
+  position: relative;
+  top: 0.4rem;
+  left: -3.4rem;
+}
+
+.form-control small {
+  padding-left: 10.2rem;
+  font-size: 1.2rem;
+  color: rgba(239, 125, 125, 0.838);
+  transition: opacity 1s;
+}
+
+.form-control.success input {
+  border-color: rgb(161, 241, 120);
+}
+
+.form-control.error input {
+  border-color: rgb(238, 46, 46);
+}
+
+.form-control.success span.material-symbols-outlined {
+  color: rgb(161, 241, 120);
+  visibility: visible;
+}
+
+.form-control.error span.material-symbols-outlined {
+  color: rgb(242, 69, 69);
+}
+
 input[type=number] {
-  width: 40%;
+  position: relative;
+  width: 50%;
   padding: 4px 6px;
-  margin: 10px 0;
+  margin: 0.5rem 0;
   background-color: rgba(177, 240, 188, 0.4509803922);
   font-family: "Mouse Memoirs", sans-serif;
   text-align: center;
@@ -205,7 +245,6 @@ input[type=number] {
   letter-spacing: 0.4rem;
   color: rgba(0, 0, 0, 0.755);
   border-radius: 2rem;
-  border: none;
 }
 input[type=number]:focus {
   outline: 0;
@@ -222,33 +261,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .waga {
+  margin-top: -1rem;
   padding-right: 2.37rem;
 }
 
-@keyframes section-animation {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
 .whatIsBmi {
-  position: relative;
+  z-index: -1;
+  border: 1px solid red;
 }
 
-.site-section {
-  position: relative;
+.site-section, .whatIsBmi {
+  position: absolute;
   height: 40rem;
   width: 30rem;
   padding: 2rem;
   background-color: rgba(50, 52, 63, 0.256);
   border-radius: 1.5rem;
   box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
-  animation: section-animation 4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @media screen and (min-width: 768px) {
-  .site-section {
+  .site-section, .whatIsBmi {
     width: 43rem;
     text-align: center;
   }
@@ -275,9 +307,29 @@ input[type=number]::-webkit-outer-spin-button {
 
 .aboutBmi {
   margin-top: 2.5rem;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+  text-align: center;
   color: rgba(120, 247, 175, 0.937);
   text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
+}
+@media screen and (min-width: 768px) {
+  .aboutBmi {
+    font-size: 2.6rem;
+  }
+}
+
+#return {
+  position: absolute;
+  bottom: 13rem;
+  left: 8rem;
+  font-size: 1.8rem;
+  color: rgb(234, 237, 192);
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  #return {
+    left: 14.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

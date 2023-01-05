@@ -2,9 +2,9 @@
 @use '../02-tools/' as *;
 
 .btn-whatIsBmi {
-    position: absolute;
-    top: -18rem;
-    left: -6rem;
+    position: relative;
+    top: -16rem;
+    left: -14.6rem;
     background-color: rgba(102, 102, 62, 0.703);
     color: rgb(224, 237, 163);
     border-radius: .5rem;
@@ -23,7 +23,7 @@
 .btn-result, .btn-clear {
     width: 15rem;
     height: 3rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     background-color: $color-green;
     font-family: 'Mouse Memoirs', sans-serif;
     font-size: 2rem;
@@ -31,15 +31,16 @@
     letter-spacing: .2rem;
     border-radius: 3rem;
     border-style: none;
+    box-shadow: rgba(8, 8, 8, 0.35) 0 .5rem 1rem;
     
     &:hover{
-        cursor: url('../assets/img/ekg-1.cur'), auto;
+        background-color: rgb(182, 248, 193);
+        cursor: pointer;
     }
 
     @include medium {
         width: 20rem;
         height: 4rem;
-        margin-left: -1rem;
     }
 }
 

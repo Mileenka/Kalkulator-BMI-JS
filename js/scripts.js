@@ -6,6 +6,10 @@ const btnWhatIsBmi = document.querySelector(".btn-whatIsBmi");
 
 const h1 = document.querySelector("h1");
 
+const form = document.querySelector("#form");
+
+const input = document.querySelector('input')
+
 const wzrost = document.querySelector(".wzrost");
 
 const height = document.querySelector("#height");
@@ -16,22 +20,11 @@ const weight = document.querySelector("#weight");
 
 const btnResult = document.querySelector(".btn-result");
 
-const form = document.querySelector("form");
-
-const inputNumberH = form.querySelector("input[name=height]");
-
-const inputNumberW = form.querySelector("input[name=weight]");
-
-const formMessage = form.querySelector('.form-message');
-
-const input = form.querySelector('#height');
-
 const section = document.querySelector(".site-section");
 
 const p = document.createElement("p");
 
 const aboutBmi = document.createElement("p");
-
 
 let result, info;
 
@@ -68,15 +61,58 @@ function dataClear() {
   document.querySelector("#form").reset();
 }
 
+function checkInputs() {
+  const heightValue = height.value;
+  const weightValue = weight.value;
+
+  if (heightValue === " ") {
+    // show error
+    //add error class
+    setErrorFor(heightValue, "To Pole nie może być puste");
+  } else {
+    //add succes class
+    setSuccesFor(heightValue);
+  }
+
+  if (weightValue === " ") {
+    // show error
+    //add error class
+    setErrorFor(weightValue, "To Pole nie może być puste");
+  } else {
+    //add succes class
+    setSuccesFor(weightValue);
+  }
+}
+
+form.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  checkInputs();
+});
+
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement; //.form-control
+  const small = formControl.querySelector("small");
+
+  //add error message inside small
+
+  small.innerText = message;
+
+  formControl.className = "form-control error";
+}
+
+
+
 btnResult.addEventListener("click", (event) => {
   event.preventDefault();
   // if (height.value > 30 && height.value <= 250) {
   //   if (weight.value > 0 && weight.value <= 300) {
-      let h = height.value;
-      let w = weight.value;
-      showResult(h, w);
+  let h = height.value;
+  let w = weight.value;
+  showResult(h, w);
 
-      h1.classList.add("hide");
+  h1.classList.add("hide");
   form.classList.add("hide");
 
   p.classList.add("result");
@@ -102,9 +138,13 @@ btnResult.addEventListener("click", (event) => {
 });
 
 
+
+
+
+
 //     } else {
 //       alert("Waga nie może przekraczac ....");
-      
+
 //     }
 //   } else {
 //     // formErrors.push("Wypełnij poprawnie pole z imieniem");

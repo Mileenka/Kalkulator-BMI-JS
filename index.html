@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Englebert&family=Mouse+Memoirs&family=Sansita:wght@400;700&display=swap"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Englebert&family=Mouse+Memoirs&family=Sansita:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="css/main.css">
     <title>Kalkulator BMI</title>
   </head>
   <body>
@@ -21,34 +21,51 @@
       </div>
     </header>
 
-      <section class="whatIsBmi">
-        <button class="btn-whatIsBmi">Czym jest BMI?</button>
-
-      </section>
+      
 
     <section class="site-section">
+
+      <section class="whatIsBmi hide">
+        <div>
+          <h2>Czym jest BMI ?</h2>
+          <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ad inventore quisquam at. Quis facere rerum eveniet aut dolor consequatur voluptate non! Cum asperiores dolorum consequuntur? Unde voluptatum esse quia repudiandae facere sit quibusdam harum, perspiciatis, quasi adipisci delectus deleniti dolore voluptate hic perferendis ducimus fuga sed! Consectetur, alias commodi.</article>
+        </div>
+        <button class="btn-whatIsBmi">Czym jest BMI?</button>
+      </section>
+
       <div class="img-weight1"></div>
       <div class="img-weight2"></div>
       <h1>Oblicz swój wskaźnik BMI</h1>
-
-      <form id="form">
-        <label class="wzrost" for="height">Wzrost (cm)</label>
-        <input id="height" type="number" name="height"/>
-        <br/>
-
-        <label class="waga" for="weight">Waga (kg)</label>
-        <input id="weight" type="number" name="weight"/>
-        <br/>
-
-        <div class="milka"></div>
-
-        <div class="buttons">
-          <button class="btn-result" type="submit">Oblicz</button>
-          <button class="btn-clear" type="submit" onClick="dataClear()">Wyczyść</button>
-        </div>
-      </form>
-
+      
+        
+        
+        <form id="form">
+          <div class="form-control success">
+            <label class="wzrost" for="height">Wzrost (cm)</label>
+            <input id="height" type="number" name="height">
+  
+            <!-- <span class="material-symbols-outlined">Check_Circle</span> -->
+            <small id="small1" class="hide">Wybierz z zakresu od 30 do 300</small>
+            <br>
+          </div>
+  
+          <div class="form-control error">
+            <label class="waga" for="weight">Waga (kg)</label>
+            <input id="weight" type="number" name="weight">
+            <!-- <span class="material-symbols-outlined hide">error</span> -->
+            <small id="small2" class="hide">Wybierz z zakresu od 1 do 300</small>
+            <br>
+          </div>
+  
+          <div class="buttons">
+            <button class="btn-result" type="submit">Oblicz</button>
+            <button class="btn-clear" onClick="dataClear()">Wyczyść</button>
+            <span id="return" class="display"><i class="fa-solid fa-person-walking-arrow-loop-left"></i> Policz ponownie</span>
+            
+          </div>
+        </form>
+    
     </section>
-    <script src="js/scripts.js"></script>
+    <script src="js/test.js"></script>
   </body>
 </html>
