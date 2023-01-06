@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2 {
+h1 {
   margin: 1.5rem 0 3.8rem 0rem;
   text-align: center;
   font-size: 2.5rem;
@@ -79,7 +79,7 @@ h1, h2 {
   transition: opacity 1s;
 }
 @media screen and (min-width: 768px) {
-  h1, h2 {
+  h1 {
     font-size: 2.7rem;
   }
 }
@@ -103,6 +103,27 @@ article {
 @media screen and (min-width: 768px) {
   .logo {
     font-size: 3.5rem;
+  }
+}
+
+.whatIsBmi {
+  z-index: -1;
+  border: 1px solid red;
+}
+
+#calc, .whatIsBmi {
+  position: absolute;
+  height: 40rem;
+  width: 30rem;
+  padding: 2rem;
+  background-color: rgba(50, 52, 63, 0.256);
+  border-radius: 1.5rem;
+  box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
+}
+@media screen and (min-width: 768px) {
+  #calc, .whatIsBmi {
+    width: 43rem;
+    text-align: center;
   }
 }
 
@@ -215,23 +236,6 @@ form {
   transition: opacity 1s;
 }
 
-.form-control.success input {
-  border-color: rgb(161, 241, 120);
-}
-
-.form-control.error input {
-  border-color: rgb(238, 46, 46);
-}
-
-.form-control.success span.material-symbols-outlined {
-  color: rgb(161, 241, 120);
-  visibility: visible;
-}
-
-.form-control.error span.material-symbols-outlined {
-  color: rgb(242, 69, 69);
-}
-
 input[type=number] {
   position: relative;
   width: 50%;
@@ -245,6 +249,8 @@ input[type=number] {
   letter-spacing: 0.4rem;
   color: rgba(0, 0, 0, 0.755);
   border-radius: 2rem;
+  border: none;
+  box-shadow: 3px 4px 10px 2px rgb(14, 14, 18);
 }
 input[type=number]:focus {
   outline: 0;
@@ -263,27 +269,6 @@ input[type=number]::-webkit-outer-spin-button {
 .waga {
   margin-top: -1rem;
   padding-right: 2.37rem;
-}
-
-.whatIsBmi {
-  z-index: -1;
-  border: 1px solid red;
-}
-
-.site-section, .whatIsBmi {
-  position: absolute;
-  height: 40rem;
-  width: 30rem;
-  padding: 2rem;
-  background-color: rgba(50, 52, 63, 0.256);
-  border-radius: 1.5rem;
-  box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
-}
-@media screen and (min-width: 768px) {
-  .site-section, .whatIsBmi {
-    width: 43rem;
-    text-align: center;
-  }
 }
 
 .display {

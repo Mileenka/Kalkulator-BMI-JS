@@ -1,6 +1,25 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
 
+.whatIsBmi {
+    z-index: -1;
+     border: 1px solid red;
+ }
+ 
+ #calc, .whatIsBmi{
+     position: absolute;
+     height: 40rem;
+     width: 30rem;
+     padding: 2rem;
+     background-color: rgba(50, 52, 63, 0.256);
+     border-radius: 1.5rem;
+     box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
+ 
+     @include medium {
+         width: 43rem;
+         text-align: center;
+     }
+ }
 
 .img-weight1,
 .img-weight2 {

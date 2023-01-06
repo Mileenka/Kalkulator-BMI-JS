@@ -12,38 +12,17 @@ form {
 }
 
 .form-control span {
-    // visibility: hidden;
     position: relative;
     top: .4rem;
     left: -3.4rem;
 }
 
 .form-control small {
-    // visibility: hidden;
     padding-left: 10.2rem;
     font-size: 1.2rem;
     color: rgba(239, 125, 125, 0.838);
     transition: opacity 1s;
 }
-
-.form-control.success input {
-    border-color: rgb(161, 241, 120);
-}
-
-.form-control.error input {
-    border-color: rgb(238, 46, 46);
-}
-
-.form-control.success span.material-symbols-outlined {
-    color:  rgb(161, 241, 120);
-    visibility: visible;
-}
-
-.form-control.error span.material-symbols-outlined {
-    color: rgb(242, 69, 69);
-    // visibility: hidden;
-}
-
 
 input[type=number] {
     position: relative;
@@ -58,7 +37,8 @@ input[type=number] {
     letter-spacing: 0.4rem;
     color: rgba(0, 0, 0, 0.755);
     border-radius: 2rem;
-    // border: none;
+    border: none;
+    box-shadow: 3px 4px 10px 2px rgb(14, 14, 18);
 
     &:focus {
         outline: 0;
