@@ -224,12 +224,11 @@ form {
 }
 
 .form-control span {
-  position: relative;
   top: 0.4rem;
   left: -3.4rem;
 }
 
-.form-control small {
+.form-control span {
   padding-left: 10.2rem;
   font-size: 1.2rem;
   color: rgba(239, 125, 125, 0.838);
