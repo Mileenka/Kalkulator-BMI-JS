@@ -1,12 +1,7 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
 
-.whatIsBmi {
-    z-index: -1;
-     border: 1px solid red;
- }
- 
- #calc, .whatIsBmi{
+ #calc, .whatIsBmi, .howToCalculate, .standards {
      position: absolute;
      height: 40rem;
      width: 30rem;
@@ -14,12 +9,19 @@
      background-color: rgba(50, 52, 63, 0.256);
      border-radius: 1.5rem;
      box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
- 
+    // z-index: -2;
+    // border: 1px solid green;
      @include medium {
          width: 43rem;
          text-align: center;
      }
  }
+
+//  .whatIsBmi {
+//     // z-index: 2;
+//     // border: 1px solid red;
+    
+// }
 
 .img-weight1,
 .img-weight2 {
@@ -29,10 +31,12 @@
     top: 25rem;
     opacity: 0.8;
     -webkit-filter: drop-shadow( -5px -5px 5px #000 );
-    filter: drop-shadow( -5px -5px 5px rgb(0, 0, 0) );}
+    filter: drop-shadow( -5px -5px 5px rgb(0, 0, 0) );
+    z-index: 3;
+}
 
 .img-weight1 {
-    left: -3rem;
+    left: -4.2rem;
     background: url('../assets/img/weight1.png') center/cover no-repeat;
     background-size: 8rem;
 
@@ -42,7 +46,7 @@
 }
 
 .img-weight2 {
-    right: -3rem;
+    right: -4.2rem;
     background: url('../assets/img/weight2.png') center/cover no-repeat;
     background-size: 6rem;
 

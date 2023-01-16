@@ -19,7 +19,7 @@
     text-align: center;
     color: $color-green;
     text-shadow: 4px 2px 5px rgba(59, 167, 66, 0.679);
-    // transition: opacity 3s;
+    // transition: opacity 1s;
 }
 
 .aboutBmi {
@@ -44,5 +44,18 @@
 
     @include medium {
         left: 14.5rem;
+    }
+}
+
+.return {
+    position: relative;
+    left: -5rem;
+    top: 18rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(234, 237, 192);
+
+    @include medium {
+        left: 7rem;
     }
 }

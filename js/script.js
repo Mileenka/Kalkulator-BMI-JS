@@ -49,6 +49,7 @@ const calculator = () => {
       <button class="btn-clear">Wyczyść</button>
       <span id="return" class="display"><i class="fa-solid fa-person-walking-arrow-loop-left"></i> Policz ponownie</span>
       
+      
     </div>
   </form>`;
 
@@ -57,39 +58,40 @@ const calculator = () => {
 
 calculator();
 
+const h1 = document.querySelector("h1");
+
+const pResult = document.createElement("p");
+
+const aboutBmi = document.createElement("p");
+
 const resultBmi = () => {
   let h = height.value;
   let w = weight.value;
 
   showResult(h, w);
 
-  const h1 = document.querySelector("h1");
 
-  const pResult = document.createElement("p");
-
-  const aboutBmi = document.createElement("p");
-
-  h1.classList.add("hide");
+  // h1.classList.add("hide");
   form.classList.add("hide");
 
   pResult.classList.add("result");
-  pResult.classList.add("hide");
+  // pResult.classList.add("hide");
 
   aboutBmi.classList.add("aboutBmi");
-  aboutBmi.classList.add("hide");
+  // aboutBmi.classList.add("hide");
 
   setTimeout(() => {
     h1.innerText = "Twoje BMI wynosi:";
-    h1.classList.remove("hide");
+    // h1.classList.remove("hide");
 
     form.classList.add("display");
     calc.appendChild(pResult);
     pResult.innerHTML = result;
-    pResult.classList.remove("hide");
+    // pResult.classList.remove("hide");
 
     calc.appendChild(aboutBmi);
     aboutBmi.innerHTML = "I jest to:" + " " + info;
-    aboutBmi.classList.remove("hide");
+    // aboutBmi.classList.remove("hide");
 
     calc.appendChild(comeBack);
     comeBack.classList.remove("display");
@@ -114,7 +116,7 @@ function validate() {
     rangeHeight.classList.remove("hide");
   }
 
-  
+
   height.addEventListener('change', (e) => {
     rangeHeight.classList.add("hide");
   });
@@ -145,4 +147,69 @@ const comeBack = document.querySelector("#return");
 comeBack.addEventListener("click", (e) => {
   e.preventDefault();
   location.reload();
+});
+
+const back = document.querySelector(".return");
+
+back.addEventListener("click", (e) => {
+  e.preventDefault();
+  location.reload();
+});
+
+const whatIsBmi = document.querySelector('.whatIsBmi');
+
+const btnWhatIsBmi = document.querySelector('.btn-whatIsBmi');
+
+whatIsBmi.classList.add('hide');
+
+function classList () {
+
+h1.classList.add('hide');
+  form.classList.add('hide');
+  pResult.classList.add('hide');
+  aboutBmi.classList.add('hide');
+  comeBack.classList.add('hide');
+  back.classList.remove('hide');
+}
+
+btnWhatIsBmi.addEventListener('click', (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    classList();
+  whatIsBmi.classList.remove('hide');
+  howToCalculate.classList.add('hide');
+  standards.classList.add('hide');
+}, .200);
+});
+
+const howToCalculate = document.querySelector('.howToCalculate');
+
+const btnHowToCalculate = document.querySelector('.btn-howToCalculate')
+
+howToCalculate.classList.add('hide');
+
+btnHowToCalculate.addEventListener('click', (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    classList();
+  whatIsBmi.classList.add('hide');
+  howToCalculate.classList.remove('hide');
+  standards.classList.add('hide');
+}, .200);
+});
+
+const standards = document.querySelector('.standards');
+
+const btnStandards = document.querySelector('.btn-standards')
+
+standards.classList.add('hide');
+
+btnStandards.addEventListener('click', (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    classList();
+  whatIsBmi.classList.add('hide');
+  howToCalculate.classList.add('hide');
+  standards.classList.remove('hide');
+}, .200);
 });

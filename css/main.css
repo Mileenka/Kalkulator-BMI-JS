@@ -84,9 +84,89 @@ h1 {
   }
 }
 
-article {
-  font-size: 1.6rem;
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
   color: rgba(120, 247, 175, 0.937);
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+article,
+.patternBmi,
+.standardsList {
+  padding: 1rem 2.8rem 0 2.8rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  word-spacing: -0.07rem;
+  color: rgba(215, 244, 212, 0.744);
+  transition: opacity 1s;
+}
+@media screen and (min-width: 768px) {
+  article,
+.patternBmi,
+.standardsList {
+    font-size: 1.9rem;
+  }
+}
+
+.bodyMassIndex {
+  letter-spacing: 0.02rem;
+}
+
+.patternBmi {
+  padding: 0;
+  margin: 1.5rem 0 1.5rem -0.5rem;
+  font-size: 1.65rem;
+  color: rgb(225, 224, 136);
+}
+@media screen and (min-width: 768px) {
+  .patternBmi {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.howToCalculateInfo {
+  line-height: 1.75rem;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .howToCalculateInfo {
+    line-height: 2rem;
+    font-size: 1.9rem;
+  }
+}
+
+.standardsInfo {
+  line-height: 1.7rem;
+  font-size: 1.45rem;
+  letter-spacing: 0.08rem;
+}
+@media screen and (min-width: 768px) {
+  .standardsInfo {
+    line-height: 2rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.01rem;
+  }
+}
+
+.standardsList {
+  margin-top: 0.4rem;
+  list-style: none;
+  font-size: 1.7rem;
+  color: rgb(225, 224, 136);
+}
+@media screen and (min-width: 768px) {
+  .standardsList {
+    font-size: 1.8rem;
+    margin-top: 0.4rem;
+    margin-left: 7rem;
+  }
 }
 
 .logo {
@@ -106,12 +186,7 @@ article {
   }
 }
 
-.whatIsBmi {
-  z-index: -1;
-  border: 1px solid red;
-}
-
-#calc, .whatIsBmi {
+#calc, .whatIsBmi, .howToCalculate, .standards {
   position: absolute;
   height: 40rem;
   width: 30rem;
@@ -121,7 +196,7 @@ article {
   box-shadow: rgba(10, 10, 10, 0.48) 10px 4px 16px 0px, rgb(27, 30, 36) -10px 4px 16px 0px;
 }
 @media screen and (min-width: 768px) {
-  #calc, .whatIsBmi {
+  #calc, .whatIsBmi, .howToCalculate, .standards {
     width: 43rem;
     text-align: center;
   }
@@ -136,10 +211,11 @@ article {
   opacity: 0.8;
   -webkit-filter: drop-shadow(-5px -5px 5px #000);
   filter: drop-shadow(-5px -5px 5px rgb(0, 0, 0));
+  z-index: 3;
 }
 
 .img-weight1 {
-  left: -3rem;
+  left: -4.2rem;
   background: url("../assets/img/weight1.png") center/cover no-repeat;
   background-size: 8rem;
 }
@@ -150,7 +226,7 @@ article {
 }
 
 .img-weight2 {
-  right: -3rem;
+  right: -4.2rem;
   background: url("../assets/img/weight2.png") center/cover no-repeat;
   background-size: 6rem;
 }
@@ -160,14 +236,41 @@ article {
   }
 }
 
-.btn-whatIsBmi {
+.btn-whatIsBmi,
+.btn-howToCalculate,
+.btn-standards {
   position: relative;
-  top: -16rem;
-  left: -14.6rem;
-  background-color: rgba(102, 102, 62, 0.703);
-  color: rgb(224, 237, 163);
+  top: -22rem;
+  left: 1rem;
+  width: 8rem;
+  height: 4rem;
+  margin-left: 0.7rem;
+  background-color: rgba(224, 224, 116, 0.849);
+  font-family: inherit;
+  color: rgb(41, 39, 59);
+  font-weight: 800;
+  font-size: 1.6rem;
   border-radius: 0.5rem;
   border-style: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .btn-whatIsBmi,
+.btn-howToCalculate,
+.btn-standards {
+    width: 10rem;
+    height: 5rem;
+    top: -10rem;
+    left: -25.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-howToCalculate {
+    display: flex;
+  }
 }
 
 .buttons {
@@ -177,7 +280,8 @@ article {
   align-items: center;
 }
 
-.btn-result, .btn-clear {
+.btn-result,
+.btn-clear {
   width: 15rem;
   height: 3rem;
   margin-top: 2rem;
@@ -190,12 +294,14 @@ article {
   border-style: none;
   box-shadow: rgba(8, 8, 8, 0.35) 0 0.5rem 1rem;
 }
-.btn-result:hover, .btn-clear:hover {
+.btn-result:hover,
+.btn-clear:hover {
   background-color: rgb(182, 248, 193);
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .btn-result, .btn-clear {
+  .btn-result,
+.btn-clear {
     width: 20rem;
     height: 4rem;
   }
@@ -317,6 +423,20 @@ input[type=number] {
 @media screen and (min-width: 768px) {
   #return {
     left: 14.5rem;
+  }
+}
+
+.return {
+  position: relative;
+  left: -5rem;
+  top: 18rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: rgb(234, 237, 192);
+}
+@media screen and (min-width: 768px) {
+  .return {
+    left: 7rem;
   }
 }
 

@@ -20,12 +20,47 @@
         </div>
       </div>
     </header>
+
+    <div class="bookmarks">
+      <button class="btn-whatIsBmi" type="submit">Czym jest BMI ?</button>
+      <button class="btn-howToCalculate" type="submit">Jak obliczyć ?</button>
+      <button class="btn-standards" type="submit">Wskaźnik norm BMI</button>
+    </div>
+
+    <div class="whatIsBmi hide">
+        <article>
+          <h2>Czym jest BMI?</h2>
+          <p class="bodyMassIndex">BMI (ang. Body Mass Index), nazywany także indeksem masy ciała lub wskaźnikiem Queteleta, to parametr opracowany w 1832 roku przez belgijskiego statystyka, Adolfa Queteleta. Mężczyzna ten zajmował się analizą zależności pomiędzy wzrostem i wagą ciała człowieka, co pozwoliło mu dojść do pewnych wniosków. Jak zaobserwował, masa ciała człowieka rośnie wraz ze wzrostem i jest ona większa u osób wyższych, natomiast mniejsza u osób niższych. Stworzony przez Queteleta wskaźnik BMI pozwala zatem ocenić, czy masa naszego ciała jest prawidłowa, w efekcie czego wiemy, czy prowadzony przez nas styl życia i stosowana dieta są odpowiednie.</p></article>
+    </div>
+
+    <div class="howToCalculate hide">
+        <article>
+          <h2>Jak obliczyć BMI ?</h2>
+          <p class="patternBmi">BMI = masa ciała (kg) / wzrost2 (m)</p>
+          <p class="howToCalculateInfo">Warto pamiętać, by podczas wyliczeń stosować odpowiednie miary – wzrost powinien być zawsze podawany w metrach (zamiast 170 cm należy podać 1,7 m), natomiast waga w kilogramach. Wynik otrzymany po obliczeniu BMI stanowi jedynie informację orientacyjną, co oznacza to, że nie jesteśmy w stanie na jego podstawie w szczegółowy sposób przeanalizować ogólnego stanu naszego zdrowia.</p> </article>
+    </div>
+
+    <div class="standards hide">
+        <article>
+          <h2>Wskanik BMI - normy :</h2>
+          <p class="standardsInfo">Wynik uzyskany podczas obliczania BMI należy porównać z uogólnionymi normami dla wszystkich osób dorosłych. Poszczególnym przedziałom przypisuje się konkretny stan, który odczytać możemy z poniższej tabeli opracowanej przez Światową Organizację Zdrowia (WHO):</p> </article>
+          <ul class="standardsList">
+          <li>&lt;16,0 – wygłodzenie;</li>
+          <li>16,0-16,9 – wychudzenie;</li>
+          <li>17,0-18,4 – niedowaga;</li>
+          <li>18,5-24,9 – waga prawidłowa;</li>
+          <li>25,0-29,9 – nadwaga;</li>
+          <li>30,0-34,9 – I stopień otyłości;</li>
+          <li>35,0-39,9 – II stopień otyłości;</li>
+          <li>40,0 – III stopień otyłości.</li>
+        </ul>
+    </div>
+
     <div id="calc">
-      
       <div class="img-weight1"></div>
       <div class="img-weight2"></div>
-    
     </div>
+    <span class="return hide"><i class="fa-solid fa-person-walking-arrow-loop-left"></i></span>
     <script src="js/script.js"></script>
   </body>
 </html>

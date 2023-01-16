@@ -1,15 +1,39 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
 
-.btn-whatIsBmi {
+.btn-whatIsBmi,
+.btn-howToCalculate,
+.btn-standards {
     position: relative;
-    top: -16rem;
-    left: -14.6rem;
-    background-color: rgba(102, 102, 62, 0.703);
-    color: rgb(224, 237, 163);
+    top: -22rem;
+    left: 1rem;
+    width: 8rem;
+    height: 4rem;
+    margin-left: .7rem;
+    background-color: rgba(224, 224, 116, 0.849);
+    font-family: inherit;
+    color: rgb(41, 39, 59);
+    font-weight: 800;
+    font-size: 1.6rem;
     border-radius: .5rem;
     border-style: none;
-    // border: 1px solid red;
+    cursor: pointer;
+
+    @include medium {
+        width: 10rem;
+        height: 5rem;
+        top: -10rem;
+        left: -25.8rem;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+}
+
+.btn-howToCalculate {
+    
+    @include medium {
+       display: flex; 
+    }
 }
 
 .buttons {
@@ -17,23 +41,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.btn-result, .btn-clear {
+.btn-result,
+.btn-clear {
     width: 15rem;
     height: 3rem;
     margin-top: 2rem;
     background-color: $color-green;
     font-family: 'Mouse Memoirs', sans-serif;
     font-size: 2rem;
-    color:rgb(4, 4, 4);
+    color: rgb(4, 4, 4);
     letter-spacing: .2rem;
     border-radius: 3rem;
     border-style: none;
     box-shadow: rgba(8, 8, 8, 0.35) 0 .5rem 1rem;
-    
-    &:hover{
+
+    &:hover {
         background-color: rgb(182, 248, 193);
         cursor: pointer;
     }
